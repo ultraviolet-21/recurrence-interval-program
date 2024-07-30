@@ -1,4 +1,5 @@
 #lognorm.py
+#Calculates key values and probability assuming a lognormal distribution.
 
 import math
 import numpy as np
@@ -19,13 +20,16 @@ def med(mean: float, sigma: float) -> float:
 
 
 def lognorm_dist(ref_point, point, median, sigma):
+    '''Returns lognormal cumulative distribution function (cdf)'''
     interval = point - ref_point
     return lognorm.cdf(interval, s = sigma, scale = median)
 
 def lognorm_diff(start, end):
+    '''Returns difference between 2 cdf values adjusted for the start value'''
     return (end - start) / (1-start)
 
 def probability(ref_point, start, end, mean, stdev):
+    '''Returns probability'''
     cv = cov(mean, stdev)
     sigma = sigmalnx(cv)
     median = med(mean, sigma)
