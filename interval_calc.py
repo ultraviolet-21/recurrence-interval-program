@@ -1,4 +1,5 @@
 #interval_calc
+#Handles all calculations regarding recurrence intervals and final probability
 
 from onevar_stats import *
 from datetime import datetime
@@ -8,11 +9,19 @@ import lognorm
 from filter_options import options
 
 def read_from_file(file_path: Path) -> list[int]:
-    with open(file_path, 'r') as the_file:
-        for line in the_file:
-            yield int(line.strip())
+    '''Reads time-series data from a file, assuming correct format'''
+    try:
+        with open(file_path, 'r') as the_file:
+            try:
+                for line in the_file:
+                    yield int(line.strip())
+            except:
+                print('Data not in time-series format')
+    except:
+        print('File not found')
 
 def get_intervals(years: list[int]):
+    '''Returns a list of the intervals between data points'''
     for x in range(len(years) - 1):
         yield years[x] - years[x+1]
 
