@@ -1,4 +1,8 @@
-#check_calculations.py
+#onevar_stats.py
+#This contains the mean and standard deviation functions used for calculating the interval distribution.
+#The user may also run this file separately.
+#The other statistics calculations can be called in the console if the file is run separately.
+
 
 import statistics as stats
 import math
