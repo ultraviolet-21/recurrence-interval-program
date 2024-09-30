@@ -16,7 +16,7 @@ def less_than_or_equal(data: list[int], x: int | float) -> list[int]:
 
 def options(data: list[int]) -> list[int]:
     '''Allows user to decide if they want to filter the list, returns unchanged list otherwise'''
-    print('Option 1: get most recent [fraction] of data')
+    print('Option 1: get most recent fraction of data')
     print('Option 2: get data over a certain value')
     print('Option 3: get data under a certain value')
     print('Option 4: keep unchanged')
