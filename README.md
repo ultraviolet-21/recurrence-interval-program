@@ -9,14 +9,18 @@ The Recurrence Interval Program analyzes time-series data for event occurrences.
 
 1. Data Input and Interval Calculation: The program reads data from a user-specified file containing timestamps of past events. The timestamps are in the form of “years ago” (or months, days, etc.). The user is required to enter the time of the last event, from which the rest of the times will be determined. The program will compute the intervals between consecutive points and store these intervals in a list.
 2. Statistical Analysis:
+   
     a. Mean Calculation: Determines the average interval between events.
+   
     b. Standard Deviation: Calculates the standard deviation of the intervals to understand the variability in event 
        occurrences.
-    c. Other calculations, such as logarithmic transformations, are required for lognormal distributions. 
+   
+    c. Other calculations, such as logarithmic transformations, are required for lognormal distributions.
+   
     d. The onevar_stats.py file contains other functions like range, median, and percent error if the user wishes to 
        calculate these too. The program will not automatically run these functions.
-3. Probability Calculation: A lognormal distribution is assumed since the duration of an interval cannot be negative. The program computes the lognorm.cdf (cumulative distribution function) value for both user-specified endpoints. The lognorm_diff function divides the difference between these values by 1 minus the “start” value. This result is the probability of the next event occurring within the user-specified time frame.
-4. Graph: Finally, the program shows a distribution plot of the interval lengths.
+4. Probability Calculation: A lognormal distribution is assumed since the duration of an interval cannot be negative. The program computes the lognorm.cdf (cumulative distribution function) value for both user-specified endpoints. The lognorm_diff function divides the difference between these values by 1 minus the “start” value. This result is the probability of the next event occurring within the user-specified time frame.
+5. Graph: Finally, the program shows a distribution plot of the interval lengths.
 
 
 # Tools Used:
