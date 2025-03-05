@@ -5,7 +5,7 @@
 The Recurrence Interval Program analyzes time-series data for event occurrences. It reads data points from a user-specified file, calculates the intervals between events, and provides a statistical analysis of these intervals. The user also enters a time frame, and the program outputs the probability of the next event occurring within that time frame. The program assumes a log-normal distribution to calculate the probability of future events within a given time frame.
 
 
-# Key features:
+# Key Features:
 
 1. Data Input and Interval Calculation: The program reads data from a user-specified file containing timestamps of past events. The timestamps are in the form of “years ago” (or months, days, etc.). The user is required to enter the time of the last event, from which the rest of the times will be determined. The program will compute the intervals between consecutive points and store these intervals in a list.
 2. Statistical Analysis:
